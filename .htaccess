@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+Options All -Indexes
+RewriteEngine on
+ErrorDocument 404 http://recuperacion/inmobiliaria/error/index
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+</IfModule>

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Tajawal&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+    border-radius:2px;
+    box-shadow: none;
+}
+
+
+a{
+    color: black;
+    text-decoration:none;
+}
+
+a:hover{
+    color: blue;
+    text-decoration:underline;
+}

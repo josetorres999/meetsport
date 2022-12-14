@@ -1,0 +1,39 @@
+.form form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 40rem;
+    padding: 2rem;
+}
+
+
+.form form > :not(p,a,.submit){
+    margin: 0.5rem;
+    width:13rem;
+    height:2rem;
+    border: 1px solid black;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submit{
+    margin-top: 0.5rem;;
+    background-color:black;
+    color:white;
+    width:9rem;
+    height:2rem;
+    cursor: pointer;
+}
+
+.msg_error{
+    width: fit-content;
+    height: fit-content;
+    padding: 1vw;
+}
+
