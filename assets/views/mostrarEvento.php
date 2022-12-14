@@ -17,7 +17,7 @@
     //Comprueba que el usuario no esté apuntado a más de 3 eventos
     $sql2 = "SELECT count(*) as total FROM usuario_apuntado WHERE id_usuario=".$_SESSION['id'];
     $res2 = $conn->query($sql2);
-    $total = mysqli_fetch_assoc($res)['total'];
+    $total = mysqli_fetch_assoc($res2)['total'];
 
     //Comprueba si el usuario ya esta apuntado a este evento
     $sql3 = "SELECT * FROM usuario_apuntado WHERE id_usuario=".$_SESSION['id'];
@@ -50,12 +50,13 @@
     ?>
     <button id="editar">Editar este evento</button>
     <button id="borrar">Borrar este evento</button>
+    
     <?php
 
         }
     ?>
 
-
+<a href="./chat.php?id="<?=$_GET['id']?>>Enlace al chat</a>
 
 </body>
 </html>
@@ -71,6 +72,22 @@
                 $.ajax({
                         data: parametros,
                         url: '../ajax/apuntarse.php',
+                        type: 'post',
+                        success: function(result){
+                            console.log(result);
+                            alert("Te has apuntado a este evento");
+                        }
+                    })
+            })
+
+            $("#borrarse").click(function(){
+                var parametros = {
+                    "id_usuario" : <?php echo $_SESSION['id'];?>,
+                    "id_evento" : <?php echo $_GET['id'];?>
+                }
+                $.ajax({
+                        data: parametros,
+                        url: '../ajax/borrarse.php',
                         type: 'post',
                         success: function(result){
                             console.log(result);

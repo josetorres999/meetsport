@@ -1,10 +1,10 @@
 <?php
-    include_once "../conexion.php";
+    include_once "../conexion/conexion.php";
 
     session_start();
 
-    if(isset($_GET['id_evento'])){
-        $id = $_GET['evento'];
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
     }else{
         echo "<alert>Se ha producido un error</alert>";
         header('Location: ../../index.php');
@@ -30,12 +30,12 @@
         <div id="caja-chat">
             <div id="chat">
                 <div id="datos-chat">
-                </div>
             </div>
         </div>
+    </div>
         <form method="POST" action="chat.php">
-            <input type="text" name="nombre" id="" placeholder="Ingresa tu nombre">
-            <textarea name="mensaje" id="mensaje" placeholder="ingresa tu nombre" onkeyup="comprobarEnviar(event)"></textarea>
+            <input type="text" name="mensaje" id="mensaje" placeholder="Escribe algo..."></input>
+            <button id="enviar">Enviar</button>
         </form>
     </div>
 </body>
@@ -43,10 +43,13 @@
 
 <script>
 
+    $("#enviar").click(function(){
+        comprobarEnviar();
+    })
 
-    function comprobarEnviar(e){
+    function comprobarEnviar(){
         let mensaje = $("#mensaje").val();
-        if(mensaje.length != 0 && e.which==13){
+        if(mensaje.length != 0){
             enviarMensaje(mensaje);
         }
     }

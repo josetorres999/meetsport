@@ -23,7 +23,10 @@
 
 </head>
 <body>
-    <?php include_once('./assets/views/cabecera.php'); ?>
+    <?php
+    require_once('./config/parameters.php');
+    require_once('./assets/views/cabecera.php');
+    ?>
 
     <!-----------------Cabecera-------------------->
 
