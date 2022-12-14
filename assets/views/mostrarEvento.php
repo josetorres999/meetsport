@@ -21,8 +21,9 @@
 
     //Comprueba si el usuario ya esta apuntado a este evento
     $sql3 = "SELECT * FROM usuario_apuntado WHERE id_usuario=".$_SESSION['id'];
-    $res3 = $conn->query($sql2);
+    $res3 = $conn->query($sql3);
     $apuntado = mysqli_num_rows($res3);
+    echo($apuntado);
 
 ?>
 <!--  -->
@@ -42,7 +43,7 @@
     ?>
     <button id="apuntarse" <?php if($total == 3){echo 'disabled';} ?>>¡Apuntate a este evento!</button>
     <?php
-        }else if($_SESSION['id'] != $evento['id_usuario'] && $apuntado == 1){
+        }else if($_SESSION['id'] != $evento['id_usuario'] && $apuntado > 1){
     ?>
     <button id="quitarse">Borrarse de este evento</button>
     <?php
@@ -78,9 +79,10 @@
                             alert("Te has apuntado a este evento");
                         }
                     })
+                window.location.reload();
             })
 
-            $("#borrarse").click(function(){
+            $("#quitarse").click(function(){
                 var parametros = {
                     "id_usuario" : <?php echo $_SESSION['id'];?>,
                     "id_evento" : <?php echo $_GET['id'];?>
@@ -91,9 +93,10 @@
                         type: 'post',
                         success: function(result){
                             console.log(result);
-                            alert("Te has apuntado a este evento");
+                            alert("Te has borrado de este evento");
                         }
                     })
+                window.location.reload();
             })
         })
 
