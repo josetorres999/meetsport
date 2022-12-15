@@ -1,0 +1,9 @@
+#form-buscar{
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+}
+
+#form-buscar input{
+    margin-left: 1rem;
+}

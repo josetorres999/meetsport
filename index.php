@@ -30,7 +30,6 @@
 
     <!-----------------Cabecera-------------------->
 
-    <h1>Eventos disponibles</h1>
     
 
     <?php
@@ -46,7 +45,7 @@
                     echo '<div class="evento">';
                     echo '<img src="assets/img/'.$imagen.'">';
                     echo '<div class="infoEvento">';
-                    echo '<a href="./assets/views/mostrarEvento.php?id='.$fila['id'].'"><p class="nomEv">'.$fila['titulo'].'</p></a>';
+                    echo '<a href="./assets/views/mostrar-evento.php?id='.$fila['id'].'"><p class="nomEv">'.$fila['titulo'].'</p></a>';
                     echo '<p>'.$fila['fecha'].'</p>';
                     echo '</div>';
                     echo '</div>';

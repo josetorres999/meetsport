@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <?php
+
         session_start();
         include_once("../conexion/conexion.php");
+        include_once '../../config/parameters.php';
+        include_once './cabecera.php';
 
         if(!$_SESSION['id']){
             header("Location: assets/views/login.php");
@@ -19,6 +22,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initianl-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/cabecera.css" type="text/css"></link>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script>
         var from = null, start = 0, url="../ajax/chat.php";

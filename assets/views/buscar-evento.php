@@ -17,16 +17,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/form.css">
     <link rel="stylesheet" href="../styles/index.css" type="text/css"></link>
+    <link rel="stylesheet" href="../styles/cabecera.css" type="text/css"></link>
+    <link rel="stylesheet" href="../styles/buscar.css" type="text/css"></link>
 
     <title>Document</title>
 </head>
 <body>
     <?php
-        include_once("cabecera.php");
+        include_once '../../config/parameters.php';
+        include_once("./cabecera.php");
     ?>
-    <form id="form-buscar">
+    <form id="form-buscar" method="post" action="../funciones/buscarEvento.php">
         <div>
-            <input type="text" name="textobuscar" id="textoBuscar">
             <select name="deporte" id="deporte">
                 <option value=0>Selecciona un deporte</option>
                 <?php while($row = mysqli_fetch_array($resDep)): ?>
@@ -39,26 +41,3 @@
     
 </body>
 </html>
-
-<script>
-    $('form').submit(function(e){
-        e.preventDefault();
-
-        var deporte = $( "#deporte option:selected" ).val();
-        var texto = $.trim($("#textoBuscar").val());
-
-        var parametros = {
-            "deporte" : deporte,
-            "texto" : texto,
-        }
-
-        $.ajax({
-            data:parametros,
-            type:"post",
-            url:"../ajax/buscarEvento.php",
-            success: 
-
-
-        })
-    })
-</script>

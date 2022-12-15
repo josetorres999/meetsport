@@ -1,7 +1,7 @@
 <?php
 
 include_once("../conexion/conexion.php");
-session_start();
+
 
 $id_usuario = $_SESSION['id'];
 $sql = "SELECT * FROM usuarios WHERE id = $id_usuario";
