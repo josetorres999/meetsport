@@ -55,9 +55,12 @@
     <?php
 
         }
+        echo "<a href='./chat.php?id=$id'>Enlace al chat</a>";
     ?>
 
-<a href="./chat.php?id="<?=$_GET['id']?>>Enlace al chat</a>
+
+
+
 
 </body>
 </html>
