@@ -5,6 +5,8 @@
     $consulta = "SELECT * FROM deporte";
     $resDep = $conn->query($consulta);
 
+    require_once '../../config/parameters.php';
+    require_once './cabecera.php';
     
     ?>
 
@@ -19,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/index.css" type="text/css"></link>
     <link rel="stylesheet" href="../styles/form.css">
+    <link rel="stylesheet" href="../styles/cabecera.css">
     <title>Crear Evento</title>
 </head>
     
@@ -39,7 +42,7 @@
             <input type="date" name="fecha" id="fecha" min=<?php echo $fecha_actual?> max="<?php echo $fecha_maxima?>">
             <input type="text" name="direccion" id="direccion">
             <textarea name="descripcion" id="descripcion" cols="30" rows="7" maxlength="300" placeholder="Descripcion dedl evento"></textarea>
-            <input type="submit" value="Crear">
+            <input type="submit" value="Crear" class="submit">
             <div class="msg_error" class="alert alert-danger" role="alert" style="display: none">
                 <ul class = "erroresForm">
                     <!-- Aqui se mostraran los errores -->

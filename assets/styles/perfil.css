@@ -16,26 +16,6 @@ h4{
     margin-bottom: 2rem;
 }
 
-.cerrarSesion,.borrarCuenta,#editarDes {
-    background-color: #ffcc00; /* Green */
-    border: none;
-    color: white;
-    padding: 1vh 1.5vw;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor:pointer;
-  }
-
-.borrarCuenta{
-    background-color:rgb(255, 50, 50);
-}
-
-#editarDes{
-    background-color:rgb(79, 138, 255);
-}
-
 .datosUs > :not(.editar){
     display: flex;
     flex-direction: row;

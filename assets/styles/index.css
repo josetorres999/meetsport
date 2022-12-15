@@ -14,10 +14,56 @@ a{
     text-decoration:none;
 }
 
-a:hover{
+.cabecera a:hover{
     font-size:1.5rem;
 }
 
 body{
     background-color:rgb(228, 228, 245);
+}
+
+.cerrarSesion,.borrarCuenta,#editarDes,#editar,.borrar,#apuntar {
+    background-color: #ffcc00; /* Green */
+    border: none;
+    color: white;
+    padding: 1vh 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor:pointer;
+    margin-left: 0;
+  }
+
+#editarDes{
+    background-color:rgb(79, 138, 255);
+}
+
+#editar{
+    background-color:rgb(79,138,255);
+    padding: 0.1rem 0.5rem;
+    width:13rem;
+}
+
+.borrar{
+    background-color:red;
+    padding: 0.1rem 0.5rem;
+    width:13rem;
+}
+
+#apuntar{
+    padding: 0.1rem 0.5rem;
+    background-color:rgb(4, 253, 8);
+    color:rgb(44, 13, 13);
+    width:13rem;
+}
+
+.info-evento{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.info-evento a{
+    margin-top: 1rem;
 }

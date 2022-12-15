@@ -1,0 +1,7 @@
+.info-evento > textarea, input{
+    width: 18vw;
+}
+
+input{
+    border:1px solid black;
+}
