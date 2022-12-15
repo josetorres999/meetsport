@@ -1,9 +1,13 @@
 <?php
-
+    session_start();
     include_once("../conexion/conexion.php");
 
     $consulta = "SELECT * FROM deporte";
     $resDep = $conn->query($consulta);
+
+    if(!$_SESSION['id']){
+        header("Location: assets/views/login.php");
+    }
 
     
     ?>
@@ -61,9 +65,7 @@
                 $(".msg_error").hide("slow");
 
 
-                var autocomplete = new google.maps.places.Autocomplete((document.getElementById("direccion")),{
-                    types:['geocode']
-                })
+                var autocomplete = new google.maps.places.Autocomplete((document.getElementById("direccion")));
 
                 var deporte = $( "#deporte option:selected" ).val();
                 var personas = $("#n_personas").val();

@@ -3,6 +3,10 @@
     include_once("../conexion/conexion.php");
     session_start();
 
+    if(!$_SESSION['id']){
+        header("Location: assets/views/login.php");
+    }
+
     if(isset($_GET['id'])){
         $id = $_GET['id'];
     }else{

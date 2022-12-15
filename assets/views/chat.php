@@ -5,6 +5,10 @@
         session_start();
         include_once("../conexion/conexion.php");
 
+        if(!$_SESSION['id']){
+            header("Location: assets/views/login.php");
+        }
+
         $consulta = "SELECT nom_us FROM usuarios WHERE id=".$_SESSION['id'];
         $resnombre = $conn->query($consulta);
         $nombre = $resnombre->fetch_assoc()['nom_us'];

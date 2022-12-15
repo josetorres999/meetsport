@@ -25,7 +25,7 @@
         
         <form action="" method="post" class="form">
             <img src="../img/logo-placeholder-image.png" alt="logo" style="height:15vh; width:15vh;">
-            <p class = "texto">Bienvenido a Proyecto Integrado</p>
+            <p class = "texto">Bienvenido a MeetSport</p>
             <input type="text" id="logUs" placeholder="Nombre de usuario...">
             <input type="password" id="logPass" placeholder="Contraseña...">
             <button type="button" id="botLog" class="submit">Iniciar sesión</button>

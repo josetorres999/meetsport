@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!$_SESSION['id']){
+    header("Location: assets/views/login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

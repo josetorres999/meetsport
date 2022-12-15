@@ -23,7 +23,6 @@
         
         <form action="" method="post" class="form">
             <img src="../img/logo-placeholder-image.png" alt="logo" style="height:15vh; width:15vh;">
-            <input type="file" id="regImg">
             <input type="text" id="regUs"  placeholder="Nombre de usuario...">
             <input type="text" id="regNom" placeholder="Nombre...">
             <input type="text" id="regAp" placeholder="Apellidos...">
