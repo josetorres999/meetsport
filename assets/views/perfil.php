@@ -37,28 +37,25 @@
                         </li>
                         </div>
                         <div class='cajas'>
-                        <h4>Contraseña</h4>
-                        <input type='password' name='contrasena' id='contrasena' placeholder='hola' value='$contrasena'><button id='editarDes'>Editar</button>                     
-                        <h4 class='descripcion'>Descripción</h4>                      
+                        <h4 name='contrasena'>Contraseña</h4>
+                        <form action='../funciones/cambiarDatos.php?tipo=contrasena' method='POST' method='GET'>
+                        <input type='password' name='contrasena' id='contrasena' placeholder='cambia tu contrasena' value='$contrasena'>
+                        <button id='editarDes'>Editar</button>
+                        </form>
+                        <h4 class='descripcion'>Descripción</h4>
+                        <form action='../funciones/cambiarDatos.php?tipo=descripcion' method='POST'>
                         <textarea name='descripcion' id='descripcion' cols='30' rows='7' maxlength='300' placeholder='Máximo 300 caracteres'>$descripcion</textarea>
                         <button id='editarDes'>Editar</button>
+                        </form>                      
                         </div>"
             ?>
             <div class="accion">
-                <form action="../funciones/cerrarSesion.php">
-                    <button class="cerrarSesion" id="cerrarS">Cerrar sesión</button>
-                </form>
-                <button class="borrarCuenta" id="eliminarC">Eliminar cuenta</button>
-                <script type="text/javascript">
-                    $('#cerrarS').click(function(){
-                        console.log('hola')
-                    })
-                </script>
+                    <form action="../funciones/cerrarSesion.php">
+                        <button class="cerrarSesion" id="cerrarS">Cerrar sesión</button>
+                    </form>
             </div>
         </div>
-
     </div>
- 
 </body>
 </html>
 

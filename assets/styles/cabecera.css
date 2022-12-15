@@ -13,7 +13,6 @@
 }
 
 #cabecera-img{
-    border:1px solid black;
     height:5rem;
     width:5rem;
     margin-left:-2rem;
@@ -25,10 +24,10 @@ ul{
 }
 
 .cabecera{
-    border: solid 1px black;
     display: flex;
     justify-content: space-between;
     height: 5rem;
-    width: 94rem;
+    width: 98vw;
     margin-top:0rem;
+    background-color:rgb(209, 161, 254);
 }
